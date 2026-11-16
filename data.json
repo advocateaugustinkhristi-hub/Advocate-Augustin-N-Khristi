@@ -9,22 +9,6 @@
   "updates": [],
   "posts": [
     {
-      "id": "moowr-explained-a1",
-      "date": "2026-11-05",
-      "cat": "CBIC",
-      "title": "MOOWR in plain words: manufacturing in a bonded warehouse",
-      "excerpt": "What the scheme lets a manufacturer defer, and what it asks in return.",
-      "body": "MOOWR stands for Manufacture and Other Operations in Warehouse Regulations, 2019. It is made under section 65 of the Customs Act, 1962.\n\nIn short, a manufacturer can bring capital goods and raw materials into a licensed bonded warehouse without paying customs duty at that stage. Duty is paid when the finished goods or inputs leave the warehouse for sale in India. Goods exported are not charged import duty.\n\n## What it helps with\n\n- Cash flow, because duty on capital goods and inputs is deferred.\n- Duty planning, because the point at which duty is paid depends on how goods leave the warehouse.\n- Export-oriented units that want to avoid paying duty and claiming it back.\n\n## What it asks of you\n\n- A warehouse licence and a bond with the jurisdictional customs authority.\n- Records of every item that comes in, is used and goes out, kept in the form customs expects.\n- Ongoing compliance with the conditions of the licence, including how waste and scrap are treated.\n\nWhether the scheme suits a business depends on its product, its sales mix between domestic and export, and its record-keeping. If you are weighing it, write to me with a short description of your operation."
-    },
-    {
-      "id": "scomet-basics-b2",
-      "date": "2026-11-04",
-      "cat": "DGFT",
-      "title": "SCOMET: does your product need an export authorisation?",
-      "excerpt": "A short guide to the list, and why classification comes first.",
-      "body": "SCOMET stands for Special Chemicals, Organisms, Materials, Equipment and Technologies. It is India's list of dual-use and strategic items whose export is controlled under the Foreign Trade (Development and Regulation) Act, 1992.\n\nThe list sits in Appendix 3 to Schedule 2 of the ITC (HS) classifications and is updated from time to time through DGFT notifications. An item on the list needs an export authorisation before it ships. This can apply to goods, software and technology.\n\n## Start with classification\n\nThe first step is to compare your product's technical specification with the entries on the current list. A product can fall under a category because of what it does, not what it is called. The same product may also be controlled only above a certain specification.\n\n## Then check the end use and the destination\n\nEven when an item is not listed, a catch-all provision can apply if the exporter knows the goods are meant for a prohibited end use. Keep your reasoning in writing.\n\nIf you are unsure, send me the product's technical data sheet and I will tell you what to check next."
-    },
-    {
       "id": "moowr-simple-guide-c3",
       "date": "2026-11-16",
       "cat": "CBIC",
