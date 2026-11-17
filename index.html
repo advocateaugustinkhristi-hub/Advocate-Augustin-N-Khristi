@@ -533,6 +533,42 @@ body{font-size:17px}
 .gate-btns button{padding:14px 24px;border:2px solid #0f2a4a;border-radius:999px;background:transparent;color:#0f2a4a;font:700 .9rem/1 var(--sans);cursor:pointer}
 .gate-btns button.go{background:#1d4e89;color:#fff;border-color:#1d4e89}
 .gate-btns button:hover{opacity:.85}
+
+/* newspaper-style notifications */
+.s-updates.paper{--np-ink:#14171c;--np-mute:#4b5160;--np-soft:#cfc8b8;--np-accent:#1d4e89;background:#f7f4ec;color:var(--np-ink)}
+.paper .ill{display:none}
+.paper{--np-serif:Georgia,"Times New Roman","Noto Serif",serif}
+.np-head{text-align:center;padding:6px 0 14px;border-top:4px double var(--np-ink);border-bottom:4px double var(--np-ink)}
+.np-top{display:flex;justify-content:space-between;align-items:center;gap:6px 18px;flex-wrap:wrap;padding:8px 0;font:600 .76rem/1.3 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--np-mute)}
+.np-top .u-count{margin:0;font:600 .76rem/1.3 var(--sans);letter-spacing:.12em;color:var(--np-mute)}
+.np-title.flap{display:block;margin:4px 0 6px;font:700 clamp(2.5rem,9vw,6.2rem)/1 var(--np-serif);letter-spacing:-.015em;text-transform:none;color:var(--np-ink)}
+.np-sub{margin:0;font:italic 400 1.02rem/1.4 var(--np-serif);color:var(--np-mute)}
+.np-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:0;margin:0;border-bottom:1px solid var(--np-ink)}
+.paper .np-nav .chip{padding:13px 20px;border:0;border-right:1px solid var(--np-soft);border-radius:0;background:transparent;color:var(--np-ink);font:700 .78rem/1 var(--sans);letter-spacing:.12em}
+.paper .np-nav .chip:last-child{border-right:0}
+.paper .np-nav .chip:hover{background:rgba(20,23,28,.07);border-color:var(--np-soft)}
+.paper .np-nav .chip[aria-pressed="true"]{background:var(--np-ink);color:#f7f4ec}
+.np-note{max-width:none;margin:12px 0 26px;text-align:center;font:italic 400 .95rem/1.4 var(--np-serif);color:var(--np-mute)}
+.np-kick{margin:0 0 8px;font:700 .75rem/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--np-accent)}
+.np-lead{margin:0 0 30px;padding:0 0 30px;border-bottom:2px solid var(--np-ink)}
+.np-lead h3{margin:0 0 12px;max-width:26ch;font:700 clamp(2rem,5vw,3.5rem)/1.06 var(--np-serif);text-transform:none;letter-spacing:-.01em}
+.np-ref{margin:0 0 14px;font:italic 400 .95rem/1.4 var(--np-serif);color:var(--np-mute);overflow-wrap:anywhere}
+.np-body{font:400 1.06rem/1.7 var(--np-serif);color:var(--np-ink);max-width:70ch}
+.np-body p{margin:0 0 .9em;color:var(--np-ink)}
+.np-lead .np-body.cols{max-width:none;column-count:2;column-gap:38px;column-rule:1px solid var(--np-soft);text-align:justify;hyphens:auto}
+.np-lead .np-body p:first-child::first-letter{float:left;margin:.06em .1em 0 0;font:700 3.7em/.8 var(--np-serif)}
+.np-cols{column-count:3;column-gap:38px;column-rule:1px solid var(--np-ink)}
+.np-story{break-inside:avoid;margin:0 0 24px;padding:0 0 24px;border-bottom:1px solid var(--np-soft)}
+.np-story h3{margin:0 0 8px;font:700 1.45rem/1.15 var(--np-serif);text-transform:none;letter-spacing:0}
+.np-story .np-body{font-size:1rem;line-height:1.6}
+.np-link{display:inline-block;margin-top:4px;font:700 .78rem/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--np-accent);text-decoration:none;border-bottom:1.5px solid var(--np-accent)}
+.paper .empty{margin:34px auto;padding:30px 0;max-width:58ch;text-align:center;border-top:1px solid var(--np-soft);color:var(--np-mute);font:400 1.05rem/1.6 var(--np-serif)}
+.paper .empty b{margin-bottom:8px;font:700 clamp(1.6rem,4vw,2.3rem)/1.1 var(--np-serif);text-transform:none;color:var(--np-ink)}
+.paper .u-src{color:var(--np-accent);border-color:var(--np-accent)}
+.paper .more{display:block;margin:6px auto 30px;border-color:var(--np-ink);color:var(--np-ink);border-radius:0}
+.paper .more:hover{background:var(--np-ink);color:#f7f4ec}
+@media (max-width:1000px){.np-cols{column-count:2}}
+@media (max-width:640px){.np-cols{column-count:1;column-rule:0}.np-lead .np-body.cols{column-count:1;text-align:left}.np-top{justify-content:center;text-align:center}.paper .np-nav .chip{padding:12px 14px}}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -600,17 +636,15 @@ body{font-size:17px}
     <div class="panel" id="panel" role="tabpanel" aria-live="polite"></div>
   </div>
 </div></section>
-<section class="scene s-updates board" id="updates" data-tone="dark" data-label="Updates" aria-label="Updates"><div class="sc-in">
+<section class="scene s-updates board paper" id="updates" data-tone="light" data-label="Updates" aria-label="Updates"><div class="sc-in">
   <div class="wrap">
-    <div class="b-top">
-      <div>
-        <span class="eyebrow"><span class="live" aria-hidden="true"></span>Updates</span>
-        <h2 class="flap" id="flap" aria-label="Notifications"></h2>
-      </div>
-      <p class="b-note">Notifications and public notices from BIS, CBIC, DGFT, Income tax, MCA, RBI and SEBI, in plain language. Check the official text before you act. A summary is not legal advice.</p>
-    </div>
-    <div class="chips" id="u-chips" role="group" aria-label="Filter notifications"></div>
-    <p class="u-count" id="u-count"></p>
+    <header class="np-head">
+      <div class="np-top"><span id="np-date"></span><span class="np-src-line">BIS &middot; CBIC &middot; DGFT &middot; Income Tax &middot; MCA &middot; RBI &middot; SEBI</span><span class="u-count" id="u-count"></span></div>
+      <h2 class="np-title flap" id="flap">Notifications</h2>
+      <p class="np-sub">Notifications and public notices, in plain language</p>
+    </header>
+    <nav class="chips np-nav" id="u-chips" role="group" aria-label="Filter notifications"></nav>
+    <p class="b-note np-note">Check the official text before you act. A summary is not legal advice.</p>
     <div id="u-list"></div>
   </div>
 </div></section>
@@ -1019,28 +1053,35 @@ function renderUpdates(){
   FILTERS.forEach(function(f){
     chips.appendChild(h("button",{class:"chip",type:"button","aria-pressed":f===uFilter?"true":"false",text:f,onclick:function(){uFilter=f;uAll=false;renderUpdates()}}));
   });
+  try{$("np-date").textContent=new Date().toLocaleDateString("en-IN",{weekday:"long",day:"numeric",month:"long",year:"numeric"})}catch(e){}
   var list=$("u-list");clear(list);
   var items=state.updates.slice().sort(sortDesc).filter(function(x){return uFilter==="All"||x.auth===uFilter});
   var total=state.updates.length;
-  $("u-count").textContent=total?(items.length+" of "+total+" notification"+(total===1?"":"s")+" shown"):"";
+  $("u-count").textContent=total?(items.length+" of "+total+" notification"+(total===1?"":"s")):"";
   if(!items.length){
     list.appendChild(h("div",{class:"empty"},
       h("b",{text:uFilter==="All"?"No notifications posted yet":"No "+uFilter+" notifications posted yet"}),
-      h("span",{text:(total?"Choose another filter to see the rest. ":"New notices are posted here with a short plain-language note. ")+(isOwner?"Use Owner tools to add one. ":"")+(SITES[uFilter]?"Meanwhile, the official source is below.":"")}),
+      h("span",{text:(total?"Choose another section above to see the rest. ":"New notices are posted here with a short plain-language note. ")+(isOwner?"Use Owner tools to add one. ":"")+(SITES[uFilter]?"Meanwhile, the official source is below.":"")}),
       SITES[uFilter]?h("a",{class:"u-src",href:SITES[uFilter],target:"_blank",rel:"noopener",style:"display:inline-block;margin-top:14px",text:"Open "+uFilter+" official website \u2197"}):null));
     return;
   }
-  (uAll?items:items.slice(0,8)).forEach(function(x){
-    var main=h("div",null);
-    if(x.ref)main.appendChild(h("p",{class:"r-ref",text:x.ref}));
-    main.appendChild(h("h3",{text:x.title}));
-    if(x.summary)main.appendChild(h("p",{text:x.summary}));
-    var acts=h("div",{class:"r-act"},h("button",{class:"ask",type:"button",text:"Discuss this",onclick:function(e){openSheet((x.auth||"Notification")+": "+x.title,e.currentTarget)}}));
-    if(x.link&&/^https?:\/\//i.test(x.link))acts.appendChild(h("a",{class:"u-src",href:x.link,target:"_blank",rel:"noopener",text:"Official source ↗"}));
-    main.appendChild(acts);
-    list.appendChild(h("article",{class:"row rv"},h("div",{class:"r-date",text:fmtDate(x.date)}),h("span",{class:"r-auth",text:x.auth||"Notice"}),main));
-  });
-  if(!uAll&&items.length>8)list.appendChild(h("button",{class:"more",type:"button",text:"Show earlier notifications",onclick:function(){uAll=true;renderUpdates()}}));
+  function story(x,lead){
+    var art=h("article",{class:lead?"np-lead":"np-story"});
+    art.appendChild(h("p",{class:"np-kick",text:(x.auth||"Notice")+" \u00b7 "+fmtDate(x.date)}));
+    art.appendChild(h("h3",{text:x.title}));
+    if(x.ref)art.appendChild(h("p",{class:"np-ref",text:x.ref}));
+    if(x.summary){
+      var body=h("div",{class:"np-body"+(lead&&x.summary.length>520?" cols":"")});
+      String(x.summary).split(/\n\s*\n/).forEach(function(t){if(t.trim())body.appendChild(h("p",{text:t.trim()}))});
+      art.appendChild(body);
+    }
+    if(x.link&&/^https?:\/\//i.test(x.link))art.appendChild(h("a",{class:"np-link",href:x.link,target:"_blank",rel:"noopener",text:"Read the official notification \u2197"}));
+    return art;
+  }
+  list.appendChild(story(items[0],true));
+  var rest=items.slice(1);if(!uAll)rest=rest.slice(0,9);
+  if(rest.length){var cols=h("div",{class:"np-cols"});rest.forEach(function(x){cols.appendChild(story(x,false))});list.appendChild(cols)}
+  if(!uAll&&items.length>10)list.appendChild(h("button",{class:"more",type:"button",text:"Earlier notifications",onclick:function(){uAll=true;renderUpdates()}}));
 }
 
 /* ---------- blogs ---------- */
@@ -1241,9 +1282,7 @@ function heroFx(){
     })(t0);
   }
 }
-function ui(){
-  var fl=$("flap");"NOTIFICATIONS".split("").forEach(function(ch,i){fl.appendChild(h("span",{text:ch,style:"--i:"+i,"aria-hidden":"true"}))});
-}
+function ui(){}
 
 /* ---------- owner tools ---------- */
 function updatePub(){
