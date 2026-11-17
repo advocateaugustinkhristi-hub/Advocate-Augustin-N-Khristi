@@ -854,6 +854,25 @@ try{state=JSON.parse($("site-state").textContent)}catch(e){state=null}
 if(!state||typeof state!=="object")state={contact:{},updates:[],posts:[]};
 state.contact=state.contact||{};state.updates=state.updates||[];state.posts=state.posts||[];state.library=state.library||[];
 var isOwner=false,dirty=false,editing={u:null,b:null,l:null};
+/* Private visit counts (GoatCounter). Off until a site code is set below; no cookies, no personal data, nothing shown on the site. */
+var GC_CODE="";
+var gcReady=false,gcQueue=[];
+function gcSend(a){try{window.goatcounter.count({path:a[0],title:a[1]})}catch(e){}}
+function track(path,title){
+  if(!GC_CODE||isOwner||/^(localhost|127\.)/.test(location.hostname))return;
+  if(gcReady)gcSend([path,title]);else gcQueue.push([path,title]);
+}
+function initAnalytics(){
+  if(!GC_CODE||/^(localhost|127\.)/.test(location.hostname))return;
+  var s=document.createElement("script");
+  s.async=true;s.src="https://gc.zgo.at/count.js";
+  s.setAttribute("data-goatcounter","https://"+GC_CODE+".goatcounter.com/count");
+  s.setAttribute("data-goatcounter-settings",'{"no_onload":true}');
+  s.onload=function(){gcReady=true;gcQueue.splice(0).forEach(gcSend)};
+  document.head.appendChild(s);
+  var d=document.querySelector(".disc");
+  if(d){var n=document.createElement("p");n.textContent="This website keeps a simple count of visits to its pages. It uses no cookies and collects no personal information.";d.insertBefore(n,d.lastElementChild)}
+}
 function uid(){return Math.random().toString(36).slice(2,8)+Date.now().toString(36).slice(-3)}
 function slug(s){return String(s).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"").slice(0,50)||"post"}
 function fmtDate(d){try{return new Date(d+"T00:00:00").toLocaleDateString("en-IN",{day:"2-digit",month:"short",year:"numeric"})}catch(e){return d}}
@@ -932,6 +951,7 @@ function selectTab(id,focusNo){
   curTab=i;renderPanel(true);
 }
 function renderPanel(animate){
+  if(SERVICES[curTab]&&animate)track("/areas/"+SERVICES[curTab].id,"Area: "+SERVICES[curTab].label);
   var g=SERVICES[curTab],panel=$("panel");
   Array.prototype.forEach.call($("tabs").children,function(b,i){b.setAttribute("aria-selected",i===curTab?"true":"false");b.tabIndex=i===curTab?0:-1});
   panel.setAttribute("aria-labelledby","tab-"+g.id);clear(panel);
@@ -1125,6 +1145,7 @@ function renderBody(text,root){
 }
 var readerTopic="";
 function openReader(p){
+  track("/blog/"+p.id,"Blog: "+p.title);
   $("r-cat").textContent=p.cat||"General";$("r-title").textContent=p.title;
   $("r-meta").textContent=fmtDate(p.date)+"  ·  "+readMins(p.body)+" min read  ·  Advocate Augustin N Khristi";
   var b=$("r-body");clear(b);renderBody(p.body,b);
@@ -1177,6 +1198,7 @@ function goTo(i,dir,quiet){
   Array.prototype.forEach.call($("dk-seg").children,function(b,k){if(k===i)b.setAttribute("aria-current","true");else b.removeAttribute("aria-current")});
   if(next.id==="updates")flapGo();
   try{history.replaceState(null,"","#"+next.id)}catch(e){}
+  track("/"+next.id,"Page: "+next.getAttribute("data-label"));
   settleT=setTimeout(settle,reduce?600:1400);
 }
 function step(d){goTo(cur+d,d)}
@@ -1283,7 +1305,7 @@ function heroFx(){
     })(t0);
   }
 }
-function ui(){}
+function ui(){initAnalytics()}
 
 /* ---------- owner tools ---------- */
 function updatePub(){
@@ -1481,7 +1503,7 @@ function renderLibrary(){
     var info=h("div",null,h("span",{class:"dtag",text:tag}),h("h4",{text:x.title}));
     if(x.desc)info.appendChild(h("p",{text:x.desc}));
     var act=h("div",{class:"lib-act"});
-    if(x.url&&/^(https?:\/\/|\/|reading\/)/i.test(x.url))act.appendChild(h("a",{class:"ask",href:x.url,target:"_blank",rel:"noopener",text:(x.assetId||/^reading\//i.test(x.url))?"Read":"Open source"}));
+    if(x.url&&/^(https?:\/\/|\/|reading\/)/i.test(x.url))act.appendChild(h("a",{class:"ask",href:x.url,target:"_blank",rel:"noopener",onclick:function(){track("/reading/"+x.id,"Reading: "+x.title)},text:(x.assetId||/^reading\//i.test(x.url))?"Read":"Open source"}));
     host.appendChild(h("div",{class:"svc"},info,act));
   });
 }
