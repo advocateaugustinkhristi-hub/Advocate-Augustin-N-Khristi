@@ -49,6 +49,46 @@
       "cat": "Rules and Regulations",
       "desc": "Gazette notification amending the Foreign Contribution (Regulation) Rules, 2011.",
       "url": "reading/fcra-amendment-rules-2026.pdf"
+    },
+    {
+      "id": "moowr-no2-regulations-2019",
+      "date": "2026-11-17",
+      "title": "Manufacture and Other Operations in Warehouse (No. 2) Regulations, 2019 (MOOWR)",
+      "cat": "Rules and Regulations",
+      "desc": "Notification 69/2019-Customs (N.T.) dated 1 October 2019. The rules for manufacturing and other operations in a bonded warehouse under section 65 of the Customs Act, 1962.",
+      "url": "reading/moowr-no2-regulations-2019.pdf"
+    },
+    {
+      "id": "warehoused-goods-removal-regulations-2016",
+      "date": "2026-11-17",
+      "title": "Warehoused Goods (Removal) Regulations, 2016",
+      "cat": "Rules and Regulations",
+      "desc": "Notification 67/2016-Customs (N.T.) dated 14 May 2016. How goods are removed from one warehouse to another, or for export, under the Customs Act, 1962.",
+      "url": "reading/warehoused-goods-removal-regulations-2016.pdf"
+    },
+    {
+      "id": "central-boards-of-revenue-act-1963",
+      "date": "2026-11-17",
+      "title": "The Central Boards of Revenue Act, 1963",
+      "cat": "Bare Acts",
+      "desc": "Act No. 54 of 1963. Sets up the separate Central Boards for Direct Taxes and for Indirect Taxes and Customs (CBIC), and how the Boards work.",
+      "url": "reading/central-boards-of-revenue-act-1963.pdf"
+    },
+    {
+      "id": "sez-act-2005-as-enacted",
+      "date": "2026-11-17",
+      "title": "The Special Economic Zones Act, 2005 (SEZ Act), as enacted",
+      "cat": "Bare Acts",
+      "desc": "Act No. 28 of 2005, in the form published in the Gazette of India on 23 June 2005, before later amendments.",
+      "url": "reading/sez-act-2005-as-enacted.pdf"
+    },
+    {
+      "id": "sez-act-2005-amended-upto-february-2020",
+      "date": "2026-11-17",
+      "title": "The Special Economic Zones Act, 2005 (SEZ Act), amended up to February 2020",
+      "cat": "Bare Acts",
+      "desc": "Act No. 28 of 2005 with amendments up to February 2020, as compiled by the Export Promotion Council for EOUs and SEZs (EPCES). Includes the Schedules.",
+      "url": "reading/sez-act-2005-amended-upto-february-2020.pdf"
     }
   ]
 }
