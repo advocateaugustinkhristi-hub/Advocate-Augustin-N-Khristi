@@ -138,7 +138,7 @@ button{font:inherit;color:inherit}
 .panel{position:relative;background:var(--surface);border:2px solid var(--ink);box-shadow:8px 8px 0 var(--ink)}
 .p-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;padding:clamp(20px,3vw,34px);border-bottom:2px solid var(--ink)}
 .p-head h3{margin:0;font:900 clamp(2rem,5vw,3.8rem)/.9 var(--display);text-transform:uppercase}
-.p-sub{margin:0;padding:18px clamp(20px,3vw,34px) 12px;border-top:2px solid var(--ink);background:var(--bg);font:800 .9rem/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text)}
+.p-sub{margin:0;padding:18px clamp(20px,3vw,34px) 12px;border-top:2px solid var(--ink);background:var(--bg);font:800 clamp(1.3rem,2.6vw,1.8rem)/1.1 var(--display);text-transform:uppercase;color:var(--accent-text)}
 .p-sub:first-of-type{border-top:0}
 .p-law{margin:8px 0 0;max-width:60ch;font:400 .8rem/1.5 var(--mono);color:var(--mute)}
 .stamp{flex:none;padding:8px 16px;border:3px solid var(--accent-text);color:var(--accent-text);font:900 1.4rem/1 var(--display);letter-spacing:.12em;text-transform:uppercase;transform:rotate(-7deg);opacity:.92;border-radius:4px;box-shadow:inset 0 0 0 2px var(--surface),inset 0 0 0 3px var(--accent-text)}
@@ -484,7 +484,7 @@ body{font-size:17px}
 .big{font-size:clamp(2.4rem,7vw,5.6rem);line-height:1.02;letter-spacing:-.01em;font-weight:800}
 .c-big{font-size:clamp(2.6rem,8vw,6.4rem);line-height:1.02;letter-spacing:-.01em;font-weight:800}
 .flap{font-size:clamp(2.1rem,6.6vw,5.6rem);line-height:1.05;font-weight:800}
-.tab .code{font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.05;font-weight:800}
+.tab .code{font-size:clamp(1.35rem,2.3vw,1.9rem);line-height:1.1;font-weight:800;overflow-wrap:anywhere}
 .p-head h3{font-size:clamp(1.7rem,3.4vw,2.7rem);line-height:1.1;font-weight:800}
 .svc h4{font-size:clamp(1.15rem,1.9vw,1.5rem);line-height:1.2;font-weight:700;letter-spacing:0}
 .row h3{font-size:clamp(1.25rem,2.2vw,1.7rem);line-height:1.2;font-weight:700}
@@ -839,8 +839,8 @@ function go(target){
 
 /* ---------- services ---------- */
 var SERVICES=[
- {id:"customs",num:"01",code:"Customs",label:"Customs",law:"Customs Act, 1962 \u00b7 Foreign Trade (Development and Regulation) Act, 1992 \u00b7 Foreign Trade Policy and Handbook of Procedures",groups:[
-  {t:"1. Schemes",items:[
+ {id:"customs",code:"Customs",label:"Customs",law:"Customs Act, 1962 \u00b7 Foreign Trade (Development and Regulation) Act, 1992 \u00b7 Foreign Trade Policy and Handbook of Procedures",groups:[
+  {t:"Schemes",items:[
    ["Advance Authorisation","Duty-free import of inputs for export production, and discharge of the export obligation (EODC)."],
    ["Duty Drawback","Claims for refund of customs duty paid on inputs used in goods that are exported."],
    ["EMI","Eligible Manufacturer Importer scheme: paying customs duty once a month instead of at each clearance. Eligibility check, application on the AEO portal and monthly compliance."],
@@ -854,7 +854,7 @@ var SERVICES=[
    ["SCOMET","Classifying goods, software and technology against the SCOMET list and advising whether an export authorisation is needed."],
    ["SEZ","Special Economic Zone units and developers: approvals, imports, sales into India and compliance under the SEZ Act, 2005."],
    ["SION","Standard Input Output Norms: how much input can be imported duty-free per unit of export product, and fixation of norms."]]},
-  {t:"2. Normal customs work",items:[
+  {t:"Normal customs work",items:[
    ["Importer-Exporter Code (IEC)","Application, modification and annual updation of your IEC."],
    ["Classification and valuation","Tariff classification and customs valuation questions, with written reasoning you can rely on."],
    ["Exemption notifications","Which duty exemption applies to your goods, and the conditions you must meet to keep it."],
@@ -867,7 +867,7 @@ var SERVICES=[
    ["Policy interpretation and replies","Reading the Foreign Trade Policy and Handbook of Procedures for your product, and replying to DGFT notices and queries."],
    ["BIS finding and QCO check","Checking whether BIS certification and a Quality Control Order apply to your product before you import or sell it."]]}
  ]},
- {id:"company",num:"02",code:"Company",label:"Company services",law:"Companies Act, 2013 \u00b7 LLP Act, 2008 \u00b7 Indian Partnership Act, 1932",items:[
+ {id:"company",code:"Company",label:"Company services",law:"Companies Act, 2013 \u00b7 LLP Act, 2008 \u00b7 Indian Partnership Act, 1932",items:[
   ["Private and public limited company","Name approval, incorporation, memorandum and articles, PAN and TAN."],
   ["One person company","Incorporation and nominee documentation."],
   ["LLP","Incorporation and LLP agreement drafting."],
@@ -878,7 +878,7 @@ var SERVICES=[
   ["Name, address and object changes","Changing the company name, registered office or objects, and the filings that follow."],
   ["GST, Udyam and business registrations","GST, Udyam, and shops and establishment registrations."],
   ["Closure and strike off","Striking off a company or LLP, and winding up."]]},
- {id:"ip",num:"03",code:"IP",label:"Intellectual Property",law:"Trade Marks Act, 1999 \u00b7 Copyright Act, 1957 \u00b7 Patents Act, 1970 \u00b7 Designs Act, 2000 \u00b7 Geographical Indications Act, 1999",items:[
+ {id:"ip",code:"IP",label:"Intellectual Property",law:"Trade Marks Act, 1999 \u00b7 Copyright Act, 1957 \u00b7 Patents Act, 1970 \u00b7 Designs Act, 2000 \u00b7 Geographical Indications Act, 1999",items:[
   ["Trademark","Search, application, replies to objections, opposition, renewal and assignment."],
   ["Copyright","Registration of literary, artistic, musical and software works, and assignments and licences."],
   ["Patent","Patentability advice, filing, replies to examination reports, and grant."],
@@ -887,7 +887,7 @@ var SERVICES=[
   ["Semiconductor integrated circuit layout-design","Registration of layout-designs under the Semiconductor Integrated Circuits Layout-Design Act, 2000."],
   ["Plant variety protection","Registration under the Protection of Plant Varieties and Farmers' Rights Act, 2001."],
   ["Trade secrets and confidential information","Confidentiality and non-disclosure agreements to protect information that is not registered."]]},
- {id:"extra",num:"04",code:"Extra",label:"Extra services",law:"Drafting \u00b7 Notices \u00b7 Legal opinions \u00b7 Disputes",items:[
+ {id:"extra",code:"Extra",label:"Extra services",law:"Drafting \u00b7 Notices \u00b7 Legal opinions \u00b7 Disputes",items:[
   ["Drafting of agreements","Agreements, MoUs and deeds, drafted or vetted."],
   ["Legal opinions","Written legal opinions on your question."],
   ["Legal notices and replies","Sending a legal notice, or replying to one."],
@@ -922,7 +922,7 @@ function renderServices(){
   var tabs=$("tabs");clear(tabs);
   SERVICES.forEach(function(g,i){
     var b=h("button",{class:"tab",type:"button",role:"tab",id:"tab-"+g.id},
-      h("span",{class:"code",text:g.num}),h("span",{class:"lab",text:g.label}),h("span",{class:"cnt",text:g.items.length+" services"}));
+      h("span",{class:"code",text:g.label}),h("span",{class:"cnt",text:g.items.length+" services"}));
     b.addEventListener("click",function(){curTab=i;renderPanel(true)});
     b.addEventListener("keydown",function(e){
       var n=SERVICES.length,t=null;
