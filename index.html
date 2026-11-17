@@ -239,6 +239,19 @@ button{font:inherit;color:inherit}
 .big.md{font-size:clamp(2.8rem,9vw,7.4rem)}
 .lib{background:var(--surface);border-block:1px solid var(--line)}
 .lib .sv-lede{margin:18px 0 26px}
+.search{position:relative;max-width:560px;margin:0 0 20px}
+.search input{width:100%;box-sizing:border-box;padding:14px 46px 14px 16px;border:1.5px solid var(--night-line);border-radius:12px;background:transparent;color:var(--night-ink);font:500 1rem/1.2 var(--sans)}
+.search input::placeholder{color:var(--night-mute)}
+.search input::-webkit-search-cancel-button,.search input::-webkit-search-decoration{-webkit-appearance:none;appearance:none;display:none}
+.search input:focus{outline:2px solid currentColor;outline-offset:2px}
+.search-x{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:36px;height:36px;border:0;border-radius:50%;background:transparent;color:inherit;font-size:1.3rem;line-height:1;cursor:pointer}
+.search-x[hidden]{display:none}
+.lib .search input{border-color:var(--line);background:var(--surface);color:var(--ink)}
+.lib .search input::placeholder{color:var(--mute)}
+.s-blogs .search{color:var(--night-ink)}
+.lib .search{color:var(--ink)}
+.no-match{grid-column:1/-1;padding:26px clamp(18px,3vw,30px);border:2px dashed var(--line);color:var(--mute)}
+.s-blogs .no-match{border-color:var(--night-line);color:var(--night-mute)}
 .lib .chips{margin-bottom:22px}
 .lib .chip{border-color:var(--line);color:var(--ink)}
 .lib .chip:hover{border-color:var(--ink)}
@@ -604,6 +617,7 @@ body{font-size:17px}
     <span class="eyebrow">Free to read</span>
     <h2 class="big md wipe">Reading material</h2>
     <p class="sv-lede">Bare Acts, rules and useful government documents, free for anyone to read. Choose a category and open a document in your browser.</p>
+    <div class="search" role="search"><input id="lib-q" type="search" placeholder="Search Acts and rules" aria-label="Search reading material" autocomplete="off"><button class="search-x" id="lib-x" type="button" aria-label="Clear search" hidden>&times;</button></div>
     <div class="chips" id="lib-chips" role="group" aria-label="Filter reading material"></div>
     <div class="panel" id="lib-list"></div>
   </div>
@@ -612,6 +626,7 @@ body{font-size:17px}
   <div class="wrap">
     <span class="eyebrow">Writing</span>
     <h2 class="big wipe">Blogs</h2>
+    <div class="search" role="search"><input id="post-q" type="search" placeholder="Search blogs" aria-label="Search blogs" autocomplete="off"><button class="search-x" id="post-x" type="button" aria-label="Clear search" hidden>&times;</button></div>
     <div class="posts" id="posts"></div>
   </div>
 </div></section>
@@ -780,7 +795,7 @@ setTimeout(function(){var b=document.getElementById("gate-ok");if(b&&!g.hidden)b
 
 <div class="toast" id="toast" hidden role="status"></div>
 
-<script type="application/json" id="site-state">{"contact": {"phone": "+91 9727613827", "email": "advocateaugustinkhristi@gmail.com", "city": "Vadodara, Gujarat", "enrol": "", "email2": "augustinkhristi2241@gmail.com"}, "updates": [], "posts": [{"id": "moowr-simple-guide-c3", "date": "2026-11-16", "cat": "CBIC", "title": "MOOWR in simple words: pay customs duty later, not at the port", "excerpt": "A plain explanation of the scheme, with an example, for anyone who imports and manufactures in India.", "body": "Normally, when you bring goods into India, you pay customs duty at the port before you can take them out. For a factory that imports machines or raw materials, that is a large amount of cash paid long before any product is made or sold.\n\nMOOWR is a scheme that lets you pay that duty later. The name stands for Manufacture and Other Operations in Warehouse Regulations, 2019. It works under section 65 of the Customs Act, 1962.\n\n## The idea in one line\n\nYou keep your imported goods in a customs-approved warehouse (a bonded warehouse), do your manufacturing there, and pay duty only when the goods leave for sale in India.\n\n## A simple example\n\nA company imports a machine and some raw material. Without the scheme, it pays duty on both at the port, then waits months to earn money from the product. With the scheme, the goods go into the bonded warehouse without duty at that stage. The company makes its product. If it sells in India, duty is paid when the goods leave the warehouse. If it exports, no import duty is charged on the imported goods used.\n\n## Who it helps\n\n- Factories that import machinery or raw materials\n- Businesses that export a large part of what they make\n- Businesses that want to keep cash for running the business instead of locking it in duty\n\n## What you need to do\n\n- Apply to the customs authority for permission and a licence for the warehouse\n- Give a bond, which is a written promise to follow the rules and pay any duty that falls due\n- Keep clear records of what comes in, what is used, what is made, and what goes out\n- Send the returns and records that customs asks for, on time\n\n## Things to think about first\n\n- Duty is put off, not removed. Goods sold in India will still attract duty.\n- The records are the heart of the scheme. Poor records can cause trouble later.\n- The rules and how customs applies them change from time to time, so check the current position before you apply.\n- It does not suit every business. It depends on what you import, what you make, and how much you sell in India and abroad.\n\n## Is it right for you?\n\nIf you import machines or materials and want to ease your cash flow, it is worth a look. Send me a short note about your business: what you import, what you make, and where you sell. I will tell you whether MOOWR is worth considering and what the next steps would be.\n\nThis post is general information, not advice on your particular case."}], "library": [{"id": "customs-act-1962", "date": "2026-11-16", "title": "The Customs Act, 1962", "cat": "Bare Acts", "desc": "The principal law on levy and collection of customs duty, import and export procedure, warehousing, baggage, penalties and appeals.", "url": "reading/customs-act-1962.pdf"}, {"id": "foreign-trade-act-1992", "date": "2026-11-16", "title": "The Foreign Trade (Development and Regulation) Act, 1992", "cat": "Bare Acts", "desc": "The law under which DGFT regulates imports and exports, issues the Foreign Trade Policy and grants authorisations such as the IEC.", "url": "reading/foreign-trade-development-and-regulation-act-1992.pdf"}, {"id": "fema-1999", "date": "2026-11-16", "title": "The Foreign Exchange Management Act, 1999", "cat": "Bare Acts", "desc": "The law governing foreign exchange, cross-border payments, and foreign investment into and out of India.", "url": "reading/fema-1999.pdf"}, {"id": "fcra-amendment-rules-2026", "date": "2026-11-16", "title": "Foreign Contribution (Regulation) Amendment Rules, 2026", "cat": "Rules and Regulations", "desc": "Gazette notification amending the Foreign Contribution (Regulation) Rules, 2011.", "url": "reading/fcra-amendment-rules-2026.pdf"}]}</script>
+<script type="application/json" id="site-state">{"contact": {"phone": "+91 9727613827", "email": "advocateaugustinkhristi@gmail.com", "city": "Vadodara, Gujarat", "enrol": "", "email2": "augustinkhristi2241@gmail.com"}, "updates": [], "posts": [{"id": "moowr-simple-guide-c3", "date": "2026-11-16", "cat": "CBIC", "title": "MOOWR in simple words: pay customs duty later, not at the port", "excerpt": "A plain explanation of the scheme, with an example, for anyone who imports and manufactures in India.", "body": "Normally, when you bring goods into India, you pay customs duty at the port before you can take them out. For a factory that imports machines or raw materials, that is a large amount of cash paid long before any product is made or sold.\n\nMOOWR is a scheme that lets you pay that duty later. The name stands for Manufacture and Other Operations in Warehouse Regulations, 2019. It works under section 65 of the Customs Act, 1962.\n\n## The idea in one line\n\nYou keep your imported goods in a customs-approved warehouse (a bonded warehouse), do your manufacturing there, and pay duty only when the goods leave for sale in India.\n\n## A simple example\n\nA company imports a machine and some raw material. Without the scheme, it pays duty on both at the port, then waits months to earn money from the product. With the scheme, the goods go into the bonded warehouse without duty at that stage. The company makes its product. If it sells in India, duty is paid when the goods leave the warehouse. If it exports, no import duty is charged on the imported goods used.\n\n## Who it helps\n\n- Factories that import machinery or raw materials\n- Businesses that export a large part of what they make\n- Businesses that want to keep cash for running the business instead of locking it in duty\n\n## What you need to do\n\n- Apply to the customs authority for permission and a licence for the warehouse\n- Give a bond, which is a written promise to follow the rules and pay any duty that falls due\n- Keep clear records of what comes in, what is used, what is made, and what goes out\n- Send the returns and records that customs asks for, on time\n\n## Things to think about first\n\n- Duty is put off, not removed. Goods sold in India will still attract duty.\n- The records are the heart of the scheme. Poor records can cause trouble later.\n- The rules and how customs applies them change from time to time, so check the current position before you apply.\n- It does not suit every business. It depends on what you import, what you make, and how much you sell in India and abroad.\n\n## Is it right for you?\n\nIf you import machines or materials and want to ease your cash flow, it is worth a look. Send me a short note about your business: what you import, what you make, and where you sell. I will tell you whether MOOWR is worth considering and what the next steps would be.\n\nThis post is general information, not advice on your particular case."}], "library": [{"id": "customs-act-1962", "date": "2026-11-16", "title": "The Customs Act, 1962", "cat": "Bare Acts", "desc": "The principal law on levy and collection of customs duty, import and export procedure, warehousing, baggage, penalties and appeals.", "url": "reading/customs-act-1962.pdf"}, {"id": "foreign-trade-act-1992", "date": "2026-11-16", "title": "The Foreign Trade (Development and Regulation) Act, 1992 (FTDR Act)", "cat": "Bare Acts", "desc": "The law under which DGFT regulates imports and exports, issues the Foreign Trade Policy and grants authorisations such as the IEC.", "url": "reading/foreign-trade-development-and-regulation-act-1992.pdf"}, {"id": "fema-1999", "date": "2026-11-16", "title": "The Foreign Exchange Management Act, 1999 (FEMA)", "cat": "Bare Acts", "desc": "The law governing foreign exchange, cross-border payments, and foreign investment into and out of India.", "url": "reading/fema-1999.pdf"}, {"id": "fcra-amendment-rules-2026", "date": "2026-11-16", "title": "Foreign Contribution (Regulation) Amendment Rules, 2026 (FCRA)", "cat": "Rules and Regulations", "desc": "Gazette notification amending the Foreign Contribution (Regulation) Rules, 2011.", "url": "reading/fcra-amendment-rules-2026.pdf"}]}</script>
 <script>
 (function(){
 "use strict";
@@ -1008,10 +1023,15 @@ function renderUpdates(){
 }
 
 /* ---------- blogs ---------- */
+var postQ="",libQ="";
+function matchQ(q,fields){var t=fields.join(" ").toLowerCase();return String(q).toLowerCase().split(/\s+/).filter(Boolean).every(function(w){return t.indexOf(w)>-1})}
 function readMins(t){return Math.max(1,Math.round(String(t||"").split(/\s+/).length/200))}
 function renderPosts(){
   var host=$("posts");clear(host);
   var items=state.posts.slice().sort(sortDesc);
+  var allCount=items.length;
+  if(postQ.trim())items=items.filter(function(p){return matchQ(postQ,[p.title,p.excerpt,p.cat,p.body])});
+  if(allCount&&!items.length){host.appendChild(h("div",{class:"no-match"},h("b",{text:"No blog found"}),h("span",{text:" Try a different word, for example a scheme or Act name."})));return}
   if(!items.length){
     host.appendChild(h("div",{class:"bg-empty"},h("b",{text:"First article coming up"}),h("span",{text:isOwner?"Use Owner tools to write one.":"Explainers on customs, foreign trade and compliance are on the way."})));
     return;
@@ -1388,6 +1408,9 @@ function renderLibrary(){
   if(cats.indexOf(libCat)<0)libCat="All";
   if(cats.length>2)cats.forEach(function(c){chips.appendChild(h("button",{class:"chip",type:"button","aria-pressed":c===libCat?"true":"false",text:c,onclick:function(){libCat=c;renderLibrary()}}))});
   var items=all.filter(function(x){return libCat==="All"||x.cat===libCat});
+  var libTotal=items.length;
+  if(libQ.trim())items=items.filter(function(x){return matchQ(libQ,[x.title,x.desc,x.cat])});
+  if(libTotal&&!items.length){host.appendChild(h("div",{class:"lib-empty"},h("b",{text:"No document found"}),h("span",{text:"Try a different word, or choose All above."})));return}
   if(!items.length){
     host.appendChild(h("div",{class:"lib-empty"},h("b",{text:"Reading material coming soon"}),h("span",{text:"Bare Acts, rules and government documents will be added here."+(isOwner?" Use Owner tools, under Reading, to upload the first one.":"")})));
     return;
@@ -1404,6 +1427,16 @@ function renderLibrary(){
 }
 
 function renderAll(){renderContact();renderUpdates();renderPosts();renderLibrary()}
+var SRCH={"lib-q":["lib-x",function(v){libQ=v},function(){renderLibrary()}],"post-q":["post-x",function(v){postQ=v},function(){renderPosts()}]};
+document.addEventListener("input",function(e){
+  var c=e.target&&SRCH[e.target.id];if(!c)return;
+  c[1](e.target.value);$(c[0]).hidden=!e.target.value;c[2]();
+});
+document.addEventListener("click",function(e){
+  var b=e.target.closest&&e.target.closest(".search-x");if(!b)return;
+  var id=b.id==="lib-x"?"lib-q":"post-q",c=SRCH[id],i=$(id);
+  i.value="";c[1]("");b.hidden=true;c[2]();i.focus();
+});
 
 /* ---------- boot ---------- */
 renderServices();renderAll();heroFx();ui();initOwner();initForm();initScenes();
