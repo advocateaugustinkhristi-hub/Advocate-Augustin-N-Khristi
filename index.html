@@ -138,6 +138,8 @@ button{font:inherit;color:inherit}
 .panel{position:relative;background:var(--surface);border:2px solid var(--ink);box-shadow:8px 8px 0 var(--ink)}
 .p-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;padding:clamp(20px,3vw,34px);border-bottom:2px solid var(--ink)}
 .p-head h3{margin:0;font:900 clamp(2rem,5vw,3.8rem)/.9 var(--display);text-transform:uppercase}
+.p-sub{margin:0;padding:18px clamp(20px,3vw,34px) 12px;border-top:2px solid var(--ink);background:var(--bg);font:800 .9rem/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text)}
+.p-sub:first-of-type{border-top:0}
 .p-law{margin:8px 0 0;max-width:60ch;font:400 .8rem/1.5 var(--mono);color:var(--mute)}
 .stamp{flex:none;padding:8px 16px;border:3px solid var(--accent-text);color:var(--accent-text);font:900 1.4rem/1 var(--display);letter-spacing:.12em;text-transform:uppercase;transform:rotate(-7deg);opacity:.92;border-radius:4px;box-shadow:inset 0 0 0 2px var(--surface),inset 0 0 0 3px var(--accent-text)}
 .stamp.slam{animation:slam .55s cubic-bezier(.2,.9,.2,1.2) both}
@@ -559,10 +561,10 @@ body{font-size:17px}
       <ul class="mlinks" id="mlinks">
         <li style="--i:0"><a href="#home" data-go="#home" style="--i:0">Home<small>Start</small></a></li>
         <li><a href="#about" data-go="#about" style="--i:1">About<small>My story</small></a></li>
-        <li><a href="#services" data-go="svc:dgft" style="--i:2">Foreign Trade Policy (DGFT)<small>Service</small></a></li>
-        <li><a href="#services" data-go="svc:customs" style="--i:3">Customs<small>Service</small></a></li>
-        <li><a href="#services" data-go="svc:bis" style="--i:4">BIS<small>Service</small></a></li>
-        <li><a href="#services" data-go="svc:other" style="--i:5">Other Services<small>Service</small></a></li>
+        <li><a href="#services" data-go="svc:customs" style="--i:2">Customs<small>Service</small></a></li>
+        <li><a href="#services" data-go="svc:company" style="--i:3">Company Services<small>Service</small></a></li>
+        <li><a href="#services" data-go="svc:ip" style="--i:4">Intellectual Property<small>Service</small></a></li>
+        <li><a href="#services" data-go="svc:extra" style="--i:5">Extra Services<small>Service</small></a></li>
         <li><a href="#updates" data-go="#updates" style="--i:6">Updates<small>Notifications</small></a></li>
         <li><a href="#blogs" data-go="#blogs" style="--i:7">Blogs<small>Articles</small></a></li>
         <li><a href="#library" data-go="#library" style="--i:8">Reading Material<small>Free</small></a></li>
@@ -837,43 +839,64 @@ function go(target){
 
 /* ---------- services ---------- */
 var SERVICES=[
- {id:"dgft",code:"DGFT",label:"Foreign Trade Policy",law:"Foreign Trade (Development and Regulation) Act, 1992 · Foreign Trade Policy · Handbook of Procedures",items:[
-  ["Importer-Exporter Code (IEC)","Application, modification and annual updation of your IEC."],
-  ["SCOMET classification and authorisation","Classifying goods, software and technology against the SCOMET list and advising whether an export authorisation is needed."],
-  ["EPCG authorisation","Applications for importing capital goods at concessional duty, and monitoring of the export obligation."],
-  ["Advance Authorisation","Duty-free import of inputs for export production, and discharge of the export obligation (EODC)."],
-  ["RoDTEP and duty remission schemes","Eligibility checks and claim support for export incentive schemes."],
-  ["Certificates of origin","Documentation and issuance for exporters, including preferential origin claims under trade agreements."],
-  ["RCMC","Registration-cum-Membership Certificate through the relevant Export Promotion Council."],
-  ["Policy interpretation and replies","Reading the Foreign Trade Policy and Handbook of Procedures for your product, and replying to DGFT notices and queries."]]},
- {id:"customs",code:"Customs",label:"Customs law",law:"Customs Act, 1962 · MOOWR, 2019 · CAROTAR, 2020",items:[
-  ["MOOWR","Manufacture and Other Operations in Warehouse Regulations: eligibility, applications and ongoing compliance."],
-  ["IGCR","Import of Goods at Concessional Rate of Duty Rules: registration, end-use records and compliance."],
-  ["Classification and valuation","Tariff classification and customs valuation questions, with written reasoning you can rely on."],
-  ["Exemption notifications","Which duty exemption applies to your goods, and the conditions you must meet to keep it."],
-  ["Notices and show cause replies","Replies to customs notices and show cause notices, with support through adjudication and appeals."],
-  ["Refund and drawback","Refund, duty drawback and related claims."],
-  ["Preferential duty and CAROTAR","Claims under free trade agreements and compliance with CAROTAR, 2020."],
-  ["Bonds and warehousing","Warehouse licensing, bonds and record-keeping under the Customs Act."]]},
- {id:"bis",code:"BIS",label:"Product standards",law:"Bureau of Indian Standards Act, 2016 · Quality Control Orders",items:[
-  ["Product certification (ISI mark)","Licence applications for goods covered by a Quality Control Order, from application to grant."],
-  ["CRS registration","Compulsory Registration Scheme for electronics and IT goods."],
-  ["Foreign manufacturer certification","Licences for overseas manufacturers who supply the Indian market."],
-  ["QCO applicability","Whether a Quality Control Order covers your product, and the route that follows."],
-  ["Import of BIS-covered goods","Clearing notified goods at import and documenting compliance with the order."],
-  ["Licence maintenance","Renewals, scope changes, surrender and surveillance requirements."],
-  ["Test reports and laboratories","Preparing for sample testing at BIS-recognised laboratories."],
-  ["Replies to BIS notices","Responding to queries, deficiency letters and show cause communications from BIS."]]},
- {id:"other",code:"Other",label:"More services",law:"Companies Act, 2013 · LLP Act, 2008 · Indian Partnership Act, 1932",items:[
+ {id:"customs",num:"01",code:"Customs",label:"Customs",law:"Customs Act, 1962 \u00b7 Foreign Trade (Development and Regulation) Act, 1992 \u00b7 Foreign Trade Policy and Handbook of Procedures",groups:[
+  {t:"1. Schemes",items:[
+   ["Advance Authorisation","Duty-free import of inputs for export production, and discharge of the export obligation (EODC)."],
+   ["Duty Drawback","Claims for refund of customs duty paid on inputs used in goods that are exported."],
+   ["EMI","Eligibility, application and compliance support under this scheme."],
+   ["EPCG","Applications for importing capital goods at concessional duty, and monitoring of the export obligation."],
+   ["EPM","Eligibility and applications under the Export Promotion Mission."],
+   ["EPR","Extended Producer Responsibility registrations for producers and importers of regulated products."],
+   ["IGCR","Import of Goods at Concessional Rate of Duty Rules: registration, end-use records and compliance."],
+   ["MOOWR","Manufacture and Other Operations in Warehouse Regulations: eligibility, applications and ongoing compliance."],
+   ["RoDTEP","Eligibility checks and claim support under the Remission of Duties and Taxes on Exported Products scheme."],
+   ["RoSCTL","Claims under the Rebate of State and Central Taxes and Levies scheme for exported apparel, garments and made-ups."],
+   ["SCOMET","Classifying goods, software and technology against the SCOMET list and advising whether an export authorisation is needed."],
+   ["SEZ","Special Economic Zone units and developers: approvals, imports, sales into India and compliance under the SEZ Act, 2005."],
+   ["SION","Standard Input Output Norms: how much input can be imported duty-free per unit of export product, and fixation of norms."]]},
+  {t:"2. Normal customs work",items:[
+   ["Importer-Exporter Code (IEC)","Application, modification and annual updation of your IEC."],
+   ["Classification and valuation","Tariff classification and customs valuation questions, with written reasoning you can rely on."],
+   ["Exemption notifications","Which duty exemption applies to your goods, and the conditions you must meet to keep it."],
+   ["Notices and show cause replies","Replies to customs notices and show cause notices, with support through adjudication and appeals."],
+   ["Refund claims","Refund of customs duty and related claims."],
+   ["Preferential duty and CAROTAR","Claims under free trade agreements and compliance with CAROTAR, 2020."],
+   ["Bonds and warehousing","Warehouse licensing, bonds and record-keeping under the Customs Act."],
+   ["Certificates of origin","Documentation and issuance for exporters, including preferential origin claims under trade agreements."],
+   ["RCMC","Registration-cum-Membership Certificate through the relevant Export Promotion Council."],
+   ["Policy interpretation and replies","Reading the Foreign Trade Policy and Handbook of Procedures for your product, and replying to DGFT notices and queries."],
+   ["BIS finding and QCO check","Checking whether BIS certification and a Quality Control Order apply to your product before you import or sell it."]]}
+ ]},
+ {id:"company",num:"02",code:"Company",label:"Company services",law:"Companies Act, 2013 \u00b7 LLP Act, 2008 \u00b7 Indian Partnership Act, 1932",items:[
   ["Private and public limited company","Name approval, incorporation, memorandum and articles, PAN and TAN."],
-  ["One person company and LLP","Incorporation, LLP agreement drafting and nominee documentation."],
-  ["Partnership, proprietorship, Section 8","Partnership deed and registration, proprietor registrations, and non-profit licences under section 8."],
-  ["Registrations and annual compliance","GST, Udyam, shops and establishment, trademark applications, ROC filings, and director and share changes."],
-  ["EPR registration","Extended Producer Responsibility registrations for producers and importers of regulated products."],
-  ["Agreements and legal opinions","Drafting and vetting of agreements, MoUs and deeds, and written legal opinions."],
-  ["Notices and disputes","Legal notices and replies, cheque dishonour under section 138 of the Negotiable Instruments Act, 1881, consumer complaints and civil matters."],
-  ["Property and arbitration","Title checks, sale and lease documents, and arbitration clauses and pleadings."]]}
+  ["One person company","Incorporation and nominee documentation."],
+  ["LLP","Incorporation and LLP agreement drafting."],
+  ["Partnership firm and proprietorship","Partnership deed and registration, and proprietor registrations."],
+  ["Section 8 company","Licence and incorporation of non-profit companies under section 8."],
+  ["Annual ROC filings and compliance","Annual returns, financial statements, board and general meetings, and other ROC filings."],
+  ["Director, share and capital changes","Appointment and resignation of directors, transfer and allotment of shares, and changes in capital."],
+  ["Name, address and object changes","Changing the company name, registered office or objects, and the filings that follow."],
+  ["GST, Udyam and business registrations","GST, Udyam, and shops and establishment registrations."],
+  ["Closure and strike off","Striking off a company or LLP, and winding up."]]},
+ {id:"ip",num:"03",code:"IP",label:"Intellectual Property",law:"Trade Marks Act, 1999 \u00b7 Copyright Act, 1957 \u00b7 Patents Act, 1970 \u00b7 Designs Act, 2000 \u00b7 Geographical Indications Act, 1999",items:[
+  ["Trademark","Search, application, replies to objections, opposition, renewal and assignment."],
+  ["Copyright","Registration of literary, artistic, musical and software works, and assignments and licences."],
+  ["Patent","Patentability advice, filing, replies to examination reports, and grant."],
+  ["Design","Registration of the shape, pattern or ornament of a product."],
+  ["Geographical Indication","Applications for goods linked to a place, such as crafts, foods and farm produce."],
+  ["Semiconductor integrated circuit layout-design","Registration of layout-designs under the Semiconductor Integrated Circuits Layout-Design Act, 2000."],
+  ["Plant variety protection","Registration under the Protection of Plant Varieties and Farmers' Rights Act, 2001."],
+  ["Trade secrets and confidential information","Confidentiality and non-disclosure agreements to protect information that is not registered."]]},
+ {id:"extra",num:"04",code:"Extra",label:"Extra services",law:"Drafting \u00b7 Notices \u00b7 Legal opinions \u00b7 Disputes",items:[
+  ["Drafting of agreements","Agreements, MoUs and deeds, drafted or vetted."],
+  ["Legal opinions","Written legal opinions on your question."],
+  ["Legal notices and replies","Sending a legal notice, or replying to one."],
+  ["Cheque dishonour","Cases under section 138 of the Negotiable Instruments Act, 1881."],
+  ["Consumer complaints and civil matters","Consumer complaints and civil disputes."],
+  ["Property documents","Title checks, and sale and lease documents."],
+  ["Arbitration","Arbitration clauses and pleadings."]]}
 ];
+SERVICES.forEach(function(g){if(g.groups){g.items=[];g.groups.forEach(function(x){g.items=g.items.concat(x.items)})}});
 var curTab=0;
 function selectTab(id,focusNo){
   var i=0;SERVICES.forEach(function(g,k){if(g.id===id)i=k});
@@ -885,17 +908,21 @@ function renderPanel(animate){
   panel.setAttribute("aria-labelledby","tab-"+g.id);clear(panel);
   var stamp=null;
   panel.appendChild(h("div",{class:"p-head"},h("div",null,h("h3",{text:g.label}),h("p",{class:"p-law",text:g.law})),stamp));
-  g.items.forEach(function(it,i){
-    panel.appendChild(h("div",{class:"svc"+(animate&&!reduce?" in":""),style:"--i:"+i},
-      h("div",null,h("h4",{text:it[0]}),h("p",{text:it[1]})),
-      h("button",{class:"ask",type:"button",text:"Text or mail me",onclick:function(e){openSheet(g.code+": "+it[0],e.currentTarget)}})));
+  var n=0;
+  (g.groups||[{items:g.items}]).forEach(function(grp){
+    if(grp.t)panel.appendChild(h("h4",{class:"p-sub",text:grp.t}));
+    grp.items.forEach(function(it){
+      panel.appendChild(h("div",{class:"svc"+(animate&&!reduce?" in":""),style:"--i:"+(n++)},
+        h("div",null,h("h4",{text:it[0]}),h("p",{text:it[1]})),
+        h("button",{class:"ask",type:"button",text:"Text or mail me",onclick:function(e){openSheet(g.code+": "+it[0],e.currentTarget)}})));
+    });
   });
 }
 function renderServices(){
   var tabs=$("tabs");clear(tabs);
   SERVICES.forEach(function(g,i){
     var b=h("button",{class:"tab",type:"button",role:"tab",id:"tab-"+g.id},
-      h("span",{class:"code",text:g.code}),h("span",{class:"lab",text:g.label}),h("span",{class:"cnt",text:g.items.length+" services"}));
+      h("span",{class:"code",text:g.num}),h("span",{class:"lab",text:g.label}),h("span",{class:"cnt",text:g.items.length+" services"}));
     b.addEventListener("click",function(){curTab=i;renderPanel(true)});
     b.addEventListener("keydown",function(e){
       var n=SERVICES.length,t=null;
