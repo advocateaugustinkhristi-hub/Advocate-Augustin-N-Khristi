@@ -89,6 +89,94 @@
       "cat": "Bare Acts",
       "desc": "Act No. 28 of 2005 with amendments up to February 2020, as compiled by the Export Promotion Council for EOUs and SEZs (EPCES). Includes the Schedules.",
       "url": "reading/sez-act-2005-amended-upto-february-2020.pdf"
+    },
+    {
+      "id": "companies-act-2013-amended-upto-2015",
+      "date": "2026-11-17",
+      "title": "The Companies Act, 2013 (amended up to 2015)",
+      "cat": "Bare Acts",
+      "desc": "Act No. 18 of 2013, with amendments only up to the Companies (Amendment) Act, 2015. Later amendments are not included, so check the latest version before relying on it.",
+      "url": "reading/companies-act-2013-amended-upto-2015.pdf"
+    },
+    {
+      "id": "companies-incorporation-rules-2014-original-text",
+      "date": "2026-11-17",
+      "title": "Companies (Incorporation) Rules, 2014 (original text)",
+      "cat": "Rules and Regulations",
+      "desc": "The rules for incorporating a company under the Companies Act, 2013, with the incorporation forms. This is the original 2014 text, without later amendments.",
+      "url": "reading/companies-incorporation-rules-2014-original-text.pdf"
+    },
+    {
+      "id": "llp-act-2008",
+      "date": "2026-11-17",
+      "title": "The Limited Liability Partnership Act, 2008 (LLP Act)",
+      "cat": "Bare Acts",
+      "desc": "Act No. 6 of 2009, as on 1 September 2026. The law on forming and running a limited liability partnership.",
+      "url": "reading/llp-act-2008.pdf"
+    },
+    {
+      "id": "llp-rules-2009-original-text",
+      "date": "2026-11-17",
+      "title": "Limited Liability Partnership Rules, 2009 (original text)",
+      "cat": "Rules and Regulations",
+      "desc": "Notification G.S.R. 229(E) dated 1 April 2009, with the LLP forms. This is the original text, without later amendments.",
+      "url": "reading/llp-rules-2009-original-text.pdf"
+    },
+    {
+      "id": "patents-act-1970",
+      "date": "2026-11-17",
+      "title": "The Patents Act, 1970",
+      "cat": "Bare Acts",
+      "desc": "Act No. 39 of 1970, with all amendments up to 1 August 2024. What can be patented, how to apply, and the rights of a patent holder.",
+      "url": "reading/patents-act-1970.pdf"
+    },
+    {
+      "id": "trade-marks-act-1999",
+      "date": "2026-11-17",
+      "title": "The Trade Marks Act, 1999",
+      "cat": "Bare Acts",
+      "desc": "Act No. 47 of 1999. Registration, protection and infringement of trademarks, as amended.",
+      "url": "reading/trade-marks-act-1999.pdf"
+    },
+    {
+      "id": "copyright-act-1957",
+      "date": "2026-11-17",
+      "title": "The Copyright Act, 1957",
+      "cat": "Bare Acts",
+      "desc": "Act No. 14 of 1957, as amended, including the 2012 amendment. Copyright in literary, artistic, musical and software works.",
+      "url": "reading/copyright-act-1957.pdf"
+    },
+    {
+      "id": "designs-act-2000",
+      "date": "2026-11-17",
+      "title": "The Designs Act, 2000",
+      "cat": "Bare Acts",
+      "desc": "Act No. 16 of 2000, as published in the Gazette. Registration and protection of the shape, pattern or ornament of a product.",
+      "url": "reading/designs-act-2000.pdf"
+    },
+    {
+      "id": "gi-act-1999",
+      "date": "2026-11-17",
+      "title": "The Geographical Indications of Goods (Registration and Protection) Act, 1999 (GI Act)",
+      "cat": "Bare Acts",
+      "desc": "Act No. 48 of 1999, last updated 27 July 2022. Protection of goods linked to a place, such as crafts, foods and farm produce.",
+      "url": "reading/geographical-indications-act-1999.pdf"
+    },
+    {
+      "id": "semiconductor-ic-layout-design-act-2000",
+      "date": "2026-11-17",
+      "title": "The Semiconductor Integrated Circuits Layout-Design Act, 2000",
+      "cat": "Bare Acts",
+      "desc": "Act No. 37 of 2000. Registration and protection of layout-designs of semiconductor integrated circuits.",
+      "url": "reading/semiconductor-ic-layout-design-act-2000.pdf"
+    },
+    {
+      "id": "ppvfr-act-2001",
+      "date": "2026-11-17",
+      "title": "The Protection of Plant Varieties and Farmers' Rights Act, 2001 (PPV&FR Act)",
+      "cat": "Bare Acts",
+      "desc": "Act No. 53 of 2001, as published in the Gazette. Protection of new plant varieties and the rights of farmers and breeders.",
+      "url": "reading/plant-varieties-and-farmers-rights-act-2001.pdf"
     }
   ]
 }
