@@ -10,7 +10,7 @@
  "posts": [
   {
    "id": "moowr-simple-guide-c3",
-   "date": "2026-11-16",
+   "date": "2026-11-01",
    "cat": "CBIC",
    "title": "MOOWR in simple words: pay customs duty later, not at the port",
    "excerpt": "A plain explanation of the scheme, with an example, for anyone who imports and manufactures in India.",
@@ -19,7 +19,7 @@
   },
   {
    "id": "emi-scheme-simple-guide",
-   "date": "2026-11-17",
+   "date": "2026-11-09",
    "cat": "CBIC",
    "title": "EMI scheme in simple words: pay customs duty once a month",
    "excerpt": "How the Eligible Manufacturer Importer facility lets approved manufacturers pay import duty monthly instead of at every clearance.",
@@ -27,7 +27,7 @@
   },
   {
    "id": "epcg-scheme-simple-guide",
-   "date": "2026-11-17",
+   "date": "2026-11-11",
    "cat": "DGFT",
    "title": "EPCG scheme in simple words: import machinery without customs duty",
    "excerpt": "What the Export Promotion Capital Goods scheme is, how the export obligation works, and what happens at the end.",
@@ -35,7 +35,7 @@
   },
   {
    "id": "epr-simple-guide",
-   "date": "2026-11-17",
+   "date": "2026-11-13",
    "cat": "General",
    "title": "EPR in simple words: what importers should know about Extended Producer Responsibility",
    "excerpt": "What EPR means, which products it covers, and why it now matters at the customs counter.",
@@ -43,7 +43,7 @@
   },
   {
    "id": "rodtep-simple-guide",
-   "date": "2026-11-17",
+   "date": "2026-11-15",
    "cat": "DGFT",
    "title": "RoDTEP in simple words: getting back the hidden taxes on exports",
    "excerpt": "What the Remission of Duties and Taxes on Exported Products scheme refunds, how the refund is given, and how it is claimed.",
@@ -51,7 +51,7 @@
   },
   {
    "id": "advance-authorisation-simple-guide",
-   "date": "2026-11-17",
+   "date": "2026-11-03",
    "cat": "DGFT",
    "title": "Advance Authorisation in simple words: import inputs without duty to make export goods",
    "excerpt": "How the scheme works, the export obligation and value addition, and what happens if the promise is not kept.",
@@ -67,7 +67,7 @@
   },
   {
    "id": "duty-drawback-simple-guide",
-   "date": "2026-11-17",
+   "date": "2026-11-07",
    "cat": "CBIC",
    "title": "Duty drawback in simple words: getting customs duty back on exported goods",
    "excerpt": "How exporters recover customs duty paid on imported inputs, and the difference between the two types of rate.",
@@ -75,7 +75,7 @@
   },
   {
    "id": "bis-qco-simple-guide",
-   "date": "2026-11-17",
+   "date": "2026-11-05",
    "cat": "BIS",
    "title": "BIS and QCO in simple words: what importers must check before ordering",
    "excerpt": "What a Quality Control Order is, how BIS certification works for imported goods, and why the check comes before the purchase order.",
