@@ -1077,12 +1077,12 @@ function renderUpdates(){
   });
   try{$("np-date").textContent=new Date().toLocaleDateString("en-IN",{weekday:"long",day:"numeric",month:"long",year:"numeric"})}catch(e){}
   var list=$("u-list");clear(list);
-  var items=state.updates.slice().sort(sortDesc).filter(function(x){return uFilter==="All"||x.auth===uFilter});
-  var total=state.updates.length;
+  var live=state.updates.filter(isLive);var items=live.slice().sort(sortDesc).filter(function(x){return uFilter==="All"||x.auth===uFilter});
+  var total=live.length;
   $("u-count").textContent=total?(items.length+" of "+total+" notification"+(total===1?"":"s")):"";
   if(!items.length){
     list.appendChild(h("div",{class:"empty"},
-      h("b",{text:uFilter==="All"?"No notifications posted yet":"No "+uFilter+" notifications posted yet"}),
+      h("b",{text:(todayStr()<"2026-12-01"&&!total)?"Notifications will begin from 1 December 2026":uFilter==="All"?"No notifications posted yet":"No "+uFilter+" notifications posted yet"}),
       h("span",{text:(total?"Choose another section above to see the rest. ":"New notices are posted here with a short plain-language note. ")+(isOwner?"Use Owner tools to add one. ":"")+(SITES[uFilter]?"Meanwhile, the official source is below.":"")}),
       SITES[uFilter]?h("a",{class:"u-src",href:SITES[uFilter],target:"_blank",rel:"noopener",style:"display:inline-block;margin-top:14px",text:"Open "+uFilter+" official website \u2197"}):null));
     return;
