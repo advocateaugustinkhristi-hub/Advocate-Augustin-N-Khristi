@@ -527,8 +527,9 @@ body{font-size:17px}
 /* disclaimer gate (was unstyled, so it hid behind the page while the site was locked) */
 .gate{position:fixed;inset:0;z-index:500;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(15,42,74,.92)}
 .gate[hidden]{display:none!important}
-.gate-box{width:min(560px,100%);max-height:90vh;overflow:auto;background:#fff;color:#0f2a4a;border:2px solid #0f2a4a;box-shadow:8px 8px 0 #1d4e89;padding:clamp(22px,4vw,36px)}
+.gate-box{width:min(680px,100%);max-height:90vh;overflow:auto;background:#fff;color:#0f2a4a;border:2px solid #0f2a4a;box-shadow:8px 8px 0 #1d4e89;padding:clamp(22px,4vw,36px)}
 .gate-box h2{margin:0 0 14px;font:800 1.8rem/1.1 var(--sans);text-transform:uppercase}
+.gate-box ul{margin:0 0 14px;padding-left:20px}.gate-box li{margin:0 0 8px;font-size:1rem;line-height:1.6}
 .gate-box p{margin:0 0 14px;font-size:1rem;line-height:1.6;color:#0f2a4a}
 .gate-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
 .gate-btns button{padding:14px 24px;border:2px solid #0f2a4a;border-radius:999px;background:transparent;color:#0f2a4a;font:700 .9rem/1 var(--sans);cursor:pointer}
@@ -727,14 +728,14 @@ body{font-size:17px}
   <span class="dk-n" id="dk-n" aria-hidden="true"></span>
   <button class="dk-arrow" id="dk-next" type="button" aria-label="Next page">&rarr;</button>
 </nav>
-<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-h"><div class="gate-box"><h2 id="gate-h">Disclaimer</h2><p>This website is for information only. It is not legal advice, and it is not an advertisement or a solicitation of work. No advocate-client relationship is created by visiting it or by sending a message. Content is meant to follow the Bar Council of India Rules (Rule 36, Part VI, Chapter II).</p><p>Please confirm that you have read this and wish to continue.</p><div class="gate-btns"><button type="button" id="gate-no">Leave</button><button type="button" class="go" id="gate-ok">I understand, enter</button></div></div></div>
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-h"><div class="gate-box"><h2 id="gate-h">Disclaimer</h2><p><b>The Bar Council of India does not permit an advocate to advertise or solicit work through a website.</b></p><p>By clicking &ldquo;I Agree&rdquo; below, you acknowledge the following:</p><p>This website is meant only for information. It is not an advertisement, personal communication, invitation or inducement of any sort from Advocate Augustin N Khristi to solicit or advertise any work through this website.</p><ul><li>There is no advertisement, personal communication, solicitation, invitation or inducement of any sort on this website, and no work is being solicited through it.</li><li>You are visiting this website of your own wish and voluntary will, to get information for your own use.</li><li>Any information you read, retain or download from this website is entirely your own act. Its transmission, receipt or use, or any use of its links, does not create an advocate-client relationship.</li></ul><p>The information on this website is provided for general informational purposes only and must not be read as solicitation or advertisement in any manner. The advocate is not responsible or liable for any consequence of any action taken in reliance on the material on this website. If you have a legal issue, please seek independent legal advice.</p><p><i>Note: access to the website is given only once you confirm that you have read and agree to the above.</i></p><div class="gate-btns"><button type="button" id="gate-no">Leave</button><button type="button" class="go" id="gate-ok">I Agree</button></div></div></div>
 <script>(function(){var g=document.getElementById("gate"),m=document.getElementById("main"),ok=false;try{ok=sessionStorage.getItem("ak-gate")==="1"}catch(e){}
 function close(){g.hidden=true;if(m)m.removeAttribute("inert");document.documentElement.classList.remove("gated")}
 if(ok){g.hidden=true;return}
 if(m)m.setAttribute("inert","");document.documentElement.classList.add("gated");
 document.getElementById("gate-ok").addEventListener("click",function(){try{sessionStorage.setItem("ak-gate","1")}catch(e){}close()});
 document.getElementById("gate-no").addEventListener("click",function(){if(history.length>1){history.back()}else{location.href="about:blank"}});
-setTimeout(function(){var b=document.getElementById("gate-ok");if(b&&!g.hidden)b.focus()},50);
+setTimeout(function(){var b=document.getElementById("gate-ok");if(b&&!g.hidden)b.focus({preventScroll:true})},50);
 })();</script>
 <div class="grain" aria-hidden="true"></div>
 
