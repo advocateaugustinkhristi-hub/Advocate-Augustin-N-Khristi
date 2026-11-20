@@ -86,6 +86,7 @@ button{font:inherit;color:inherit}
 .name .small::after{content:"";height:2px;width:clamp(40px,8vw,120px);background:var(--night-accent)}
 .name .w{display:block;overflow:hidden;padding-top:.12em;font-size:var(--fs,clamp(3rem,16vw,15rem));line-height:.8;letter-spacing:-.01em;white-space:nowrap}
 .ch{display:inline-block;transform:translateY(calc(var(--f,0)*-.08em));color:color-mix(in srgb,var(--night-accent) calc(var(--f,0)*100%),var(--night-ink))}
+.hero-enrol{margin:clamp(14px,2vw,22px) 0 0;font:600 clamp(.85rem,1.8vw,1.1rem)/1.4 var(--mono);letter-spacing:.06em;color:var(--night-mute)}
 .hero-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;margin-top:clamp(22px,3vw,40px)}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin:0}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border:2px solid transparent;border-radius:999px;font:700 .95rem/1 var(--sans);letter-spacing:.04em;text-decoration:none;cursor:pointer;transform:translate(var(--mx,0),var(--my,0));transition:background .2s,color .2s,border-color .2s}
@@ -621,6 +622,7 @@ body{font-size:17px}
       <span class="w" aria-hidden="true">Augustin</span>
       <span class="w" aria-hidden="true">N Khristi</span>
     </h1>
+    <p class="hero-enrol" id="hero-enrol" hidden></p>
     <div class="hero-row">
       <p class="cta"><a class="btn solid mag" href="#services" data-go="#services">Areas of practice</a><button class="btn line mag" type="button" id="hero-contact">Contact</button></p>
       <span class="hint">Use the arrows below, swipe, or scroll to turn the page</span>
@@ -1028,6 +1030,7 @@ function renderContact(){
   if(c.enrol)ms.appendChild(h("div",null,h("div",{class:"k",text:"Enrolment"}),h("div",{class:"v sm",text:c.enrol})));
   ms.appendChild(h("div",null,h("button",{class:"btn solid",type:"button",text:"Contact",onclick:function(e){closeMenu();openSheet("",e.currentTarget)}})));
   var fe=$("foot-enrol"),ae=$("about-enrol");
+  var he=$("hero-enrol");if(he){he.hidden=!c.enrol;he.textContent=c.enrol?"Enrolment: "+c.enrol:""}
   fe.hidden=!c.enrol;fe.textContent=c.enrol?"Enrolment: "+c.enrol:"";
   ae.hidden=!c.enrol;ae.textContent=c.enrol?"Enrolment: "+c.enrol:"";
   var ul=$("reach");clear(ul);
