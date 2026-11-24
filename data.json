@@ -6,7 +6,80 @@
   "enrol": "G/8754/2026, enrolled on 25 October 2026",
   "email2": "augustinkhristi2241@gmail.com"
  },
- "updates": [],
+ "updates": [
+  {
+   "id": "circular-48-2026-customs",
+   "date": "2026-11-20",
+   "auth": "CBIC",
+   "title": "Circular No. 48/2026-Customs: Diamond Imprest Authorisation (DIA) Scheme",
+   "ref": "Circular No. 48/2026-Customs (F. No. 450/73/2024-CusIV), 20 November 2026",
+   "summary": "CBIC explains how customs will implement the Diamond Imprest Authorisation (DIA) Scheme, which DGFT introduced in January 2025, together with the new Notification No. 37/2026-Customs.\n\nThe scheme allows import of natural cut and polished diamonds weighing up to 1/4 carat (25 cents) each against a promise to export. The authorisation is valid for 12 months and one is allowed per IEC per financial year. The export obligation is a minimum 10% value addition, to be met within 18 months with no extension. Lab-grown diamonds are not covered. The goods are for actual use and cannot be transferred.\n\nThe circular clarifies that all imports and exports must go through Mumbai Airport, with clearance at the Precious Cargo Customs Clearance Centre, Bharat Diamond Bourse, BKC, Mumbai. The importer must be a Two-Star Export House or above, with at least US$ 15 million of cut and polished diamond exports in each of the last three financial years. Imports are allowed up to 5% of average annual export performance, capped at US$ 15 million. GST and income tax returns for three years must be filed. A bond equal to the export obligation and a bank guarantee for the duty foregone are needed, and records of each lot must be kept. A bona fide default can be regularised by paying duty and interest under section 28AA through the ICEGATE self-initiated payment facility.",
+   "link": "notifications/circular-48-2026-customs.pdf"
+  },
+  {
+   "id": "notification-37-2026-customs",
+   "date": "2026-11-20",
+   "auth": "CBIC",
+   "title": "Notification No. 37/2026-Customs: exemption for imports under the DIA Scheme",
+   "ref": "Notification No. 37/2026-Customs, 20 November 2026 (section 25(1) of the Customs Act, 1962)",
+   "summary": "This notification exempts natural cut and polished diamonds of Chapter 71 imported under a valid Diamond Imprest Authorisation from basic customs duty, the additional duties, anti-dumping, countervailing and safeguard duty if leviable, and IGST.\n\nThe exemption depends on conditions. They include a valid authorisation, a value limit of 5% of the average annual export performance of the last three years up to US$ 15 million, and all procedures at the Precious Cargo Customs Clearance Centre, Bharat Diamond Bourse, Mumbai, with imports and exports only through Mumbai Airport. No piece may weigh more than 25 cents (1/4 carat). The importer must be a Two-Star Export House or above, with US$ 15 million exports in each of the last three years and returns filed. Records by carat, colour, clarity and cut must be kept. The goods are for actual use and cannot be transferred, and a bond with security must be given with an undertaking to pay duty, interest and penalty if the obligation is not met.",
+   "link": "notifications/notification-37-2026-customs.pdf"
+  },
+  {
+   "id": "notification-95-2026-customs-nt",
+   "date": "2026-11-20",
+   "auth": "CBIC",
+   "title": "Notification No. 95/2026-Customs (N.T.): change in notified route at Dharchula (Nepal border)",
+   "ref": "Notification No. 95/2026-Customs (N.T.), 20 November 2026 (section 7 of the Customs Act, 1962)",
+   "summary": "CBIC has amended the earlier Notification No. 63/1994-Customs (N.T.), which lists the land customs stations and routes on the land frontier. For Dharchula on the Nepal border, the entry now covers (a) the road connecting Dharchula in district Pithoragarh, India with Darchula in Nepal, and (b) the Chharchhum motorable bridge connecting Malla Chharchhum village, Dharchula, India with Ashigadama in Darchula headquarters, Nepal.",
+   "link": "notifications/notification-95-2026-customs-nt.pdf"
+  },
+  {
+   "id": "notification-96-2026-customs-nt",
+   "date": "2026-11-23",
+   "auth": "CBIC",
+   "title": "Notification No. 96/2026-Customs (N.T.): tariff values for palm oil, soya bean oil, brass scrap, gold, silver and areca nuts",
+   "ref": "Notification No. 96/2026-Customs (N.T.), 23 November 2026, in force from 24 November 2026 (section 14(2) of the Customs Act, 1962)",
+   "summary": "CBIC has substituted the tables of tariff values in Notification No. 36/2001-Customs (N.T.). A tariff value is the value on which customs duty is calculated for these goods.\n\nTable 1 (US$ per metric tonne): crude palm oil 1141, RBD palm oil 1193, other palm oil 1167, crude palmolein 1201, RBD palmolein 1204, other palmolein 1203, crude soya bean oil 1282 and brass scrap 8154. All are marked as no change.\n\nTable 2: gold at 1149 US$ per 10 grams and silver at 1496 US$ per kilogram, for the cases listed in the notification, including the benefit of entries at serial numbers 194 and 195 of Notification No. 45/2025-Customs, and for gold bars and coins, silver and silver coins as described.\n\nTable 3: areca nuts at 10433 US$ per metric tonne, marked no change. Please read the PDF for the exact entries and conditions.",
+   "link": "notifications/notification-96-2026-customs-nt.pdf"
+  },
+  {
+   "id": "notification-36-2026-customs",
+   "date": "2026-11-13",
+   "auth": "CBIC",
+   "title": "Notification No. 36/2026-Customs: longer period for goods imported under an ATA Carnet",
+   "ref": "Notification No. 36/2026-Customs, 13 November 2026 (section 25(1) of the Customs Act, 1962)",
+   "summary": "The notification amends Notification No. 4/2018-Customs, which gives exemption for goods imported under an ATA Carnet. Condition (vi) of that notification allows goods to stay for a limited period. A new proviso now allows the Principal Chief Commissioner or Chief Commissioner of Customs, if satisfied that it is necessary in the public interest, to extend the four-month period by a further period that does not go beyond the validity of the ATA Carnet.",
+   "link": "notifications/notification-36-2026-customs.pdf"
+  },
+  {
+   "id": "notification-28-2026-customs-add",
+   "date": "2026-11-13",
+   "auth": "CBIC",
+   "title": "Notification No. 28/2026-Customs (ADD): amendment to Notification No. 18/2026-Customs (ADD)",
+   "ref": "Notification No. 28/2026-Customs (ADD), 13 November 2026 (section 9A of the Customs Tariff Act, 1975)",
+   "summary": "In the anti-dumping duty Notification No. 18/2026-Customs (ADD) of 27 July 2026, a proviso is added after clause (c) of paragraph 2. The exclusions in clauses (a) and (c) will apply only if the importer follows the procedure set out in the Customs (Import of Goods at Concessional Rate of Duty or for Specified End Use) Rules, 2022 (IGCR).",
+   "link": "notifications/notification-28-2026-customs-add.pdf"
+  },
+  {
+   "id": "notification-27-2026-customs-add",
+   "date": "2026-11-05",
+   "auth": "CBIC",
+   "title": "Notification No. 27/2026-Customs (ADD): provisional assessment of imports from Malaysia of alloy steel chisel/tool and hydraulic rock breakers",
+   "ref": "Notification No. 27/2026-Customs (ADD), 5 November 2026 (section 9A(1A) of the Customs Tariff Act, 1975)",
+   "summary": "Anti-dumping duty already applies to alloy steel chisel/tool and hydraulic rock breakers from China and Korea under Notification No. 11/2024-Customs (ADD). The Designated Authority started an anti-circumvention investigation on 28 September 2026 on imports of the product exported from Malaysia, and saw prima facie evidence of circumvention through Malaysia.\n\nUntil that investigation ends, imports from Malaysia of the fully assembled goods, and of seven parts (front head, back head, piston, cylinder body or hydraulic unit, bracket, frame and cylinder), will be provisionally assessed. The importer must give a guarantee, as the proper officer decides, for any anti-dumping duty that may become payable. The existing duty under Notification No. 11/2024 continues.",
+   "link": "notifications/notification-27-2026-customs-add.pdf"
+  },
+  {
+   "id": "circular-47-2026-customs",
+   "date": "2026-11-01",
+   "auth": "CBIC",
+   "title": "Circular No. 47/2026-Customs: implementation of the Sea Cargo Manifest and Transhipment Regulations (SCMTR), 2018",
+   "ref": "Circular No. 47/2026-Customs (F. No. 450/58/2015-Cus.IV(Pt.I)), 1 November 2026",
+   "summary": "CBIC notes that all import and export messages have been deployed under the SCMTR system, but export-side filing is still limited to some ports, and custodians, terminal operators and trans-shippers have not fully moved over because they depend on third-party software.\n\nThe old export messages will therefore be discontinued in phases, up to 31 January 2027. The planned dates by zone include Thiruvananthapuram 16 November 2026, Bengaluru 23 November, Visakhapatnam and Hyderabad 27 November, Bhubaneswar 1 December, Trichy Preventive and Chennai 7 December, Kolkata, Guwahati, Patna and Bhopal 14 December, and Delhi, Meerut, Ahmedabad, Mumbai, Nagpur and Pune 6 January 2027. Everyone must use SCMTR-compliant software and message formats. No penal action is to be taken during this phase. The circular refers to Notification No. 90/2026-Customs (N.T.) of 1 November 2026.",
+   "link": "notifications/circular-47-2026-customs.pdf"
+  }
+ ],
  "posts": [
   {
    "id": "moowr-simple-guide-c3",
