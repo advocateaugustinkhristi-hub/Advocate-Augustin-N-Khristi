@@ -4,7 +4,7 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* Layout: black hero where tariff codes react to the cursor and the name is set in giant condensed type; full-screen menu instead of a nav bar;
    services as four chunky blocks that open a panel and slam a stamp; a notifications board; blogs; an orange contact block; the story last. */
@@ -572,6 +572,15 @@ body{font-size:17px}
 .paper .more:hover{background:var(--np-ink);color:#f7f4ec}
 @media (max-width:1000px){.np-cols{column-count:2}}
 @media (max-width:640px){.np-cols{column-count:1;column-rule:0}.np-lead .np-body.cols{column-count:1;text-align:left}.np-top{justify-content:center;text-align:center}.paper .np-nav .chip{padding:12px 14px}}
+
+.lang-btn,.gate-lang .lang-toggle{padding:11px 16px;border:1.5px solid currentColor;border-radius:999px;background:transparent;color:inherit;font:700 .8rem/1 var(--sans);cursor:pointer;flex:none}
+.lang-btn{color:var(--tc)}
+.lang-btn:hover{background:var(--tc);color:var(--tbg)}
+.gate-lang{margin:0 0 10px;text-align:right}
+.gate-lang .lang-toggle{color:#1d4e89}
+html[lang="hi"]{--display:"Noto Sans Devanagari","Hanken Grotesk","Nirmala UI","Mangal",system-ui,sans-serif;--sans:"Noto Sans Devanagari","Hanken Grotesk","Nirmala UI","Mangal",system-ui,sans-serif;--mono:"Noto Sans Devanagari","Hanken Grotesk","Nirmala UI","Mangal",system-ui,sans-serif}
+html[lang="hi"] *{letter-spacing:normal !important}
+html[lang="hi"] body{line-height:1.7}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -583,6 +592,7 @@ body{font-size:17px}
     <div class="tright">
       <button class="tphone" id="top-phone" type="button" hidden></button>
       <a class="tphone" id="top-email" href="#" hidden style="text-decoration:none"></a>
+      <button class="lang-btn lang-toggle" id="lang-btn" type="button" lang="hi" aria-label="Change language">हिन्दी</button>
       <button class="top-ask" id="top-ask" type="button">Contact</button>
       <button class="owner-pill" id="owner-btn" type="button" hidden><i aria-hidden="true"></i><span>Owner tools</span></button>
       <button class="menu-btn" id="menu-btn" type="button" aria-haspopup="dialog" aria-expanded="false">Menu <i aria-hidden="true"></i></button>
@@ -730,7 +740,7 @@ body{font-size:17px}
   <span class="dk-n" id="dk-n" aria-hidden="true"></span>
   <button class="dk-arrow" id="dk-next" type="button" aria-label="Next page">&rarr;</button>
 </nav>
-<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-h"><div class="gate-box"><h2 id="gate-h">Disclaimer</h2><p><b>The Bar Council of India does not permit an advocate to advertise or solicit work through a website.</b></p><p>By clicking &ldquo;I Agree&rdquo; below, you acknowledge the following:</p><p>This website is meant only for information. It is not an advertisement, personal communication, invitation or inducement of any sort from Advocate Augustin N Khristi to solicit or advertise any work through this website.</p><ul><li>There is no advertisement, personal communication, solicitation, invitation or inducement of any sort on this website, and no work is being solicited through it.</li><li>You are visiting this website of your own wish and voluntary will, to get information for your own use.</li><li>Any information you read, retain or download from this website is entirely your own act. Its transmission, receipt or use, or any use of its links, does not create an advocate-client relationship.</li></ul><p>The information on this website is provided for general informational purposes only and must not be read as solicitation or advertisement in any manner. The advocate is not responsible or liable for any consequence of any action taken in reliance on the material on this website. If you have a legal issue, please seek independent legal advice.</p><p><i>Note: access to the website is given only once you confirm that you have read and agree to the above.</i></p><div class="gate-btns"><button type="button" id="gate-no">Leave</button><button type="button" class="go" id="gate-ok">I Agree</button></div></div></div>
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-h"><div class="gate-box"><p class="gate-lang"><button type="button" class="lang-toggle" lang="hi">हिन्दी</button></p><h2 id="gate-h">Disclaimer</h2><p><b>The Bar Council of India does not permit an advocate to advertise or solicit work through a website.</b></p><p>By clicking &ldquo;I Agree&rdquo; below, you acknowledge the following:</p><p>This website is meant only for information. It is not an advertisement, personal communication, invitation or inducement of any sort from Advocate Augustin N Khristi to solicit or advertise any work through this website.</p><ul><li>There is no advertisement, personal communication, solicitation, invitation or inducement of any sort on this website, and no work is being solicited through it.</li><li>You are visiting this website of your own wish and voluntary will, to get information for your own use.</li><li>Any information you read, retain or download from this website is entirely your own act. Its transmission, receipt or use, or any use of its links, does not create an advocate-client relationship.</li></ul><p>The information on this website is provided for general informational purposes only and must not be read as solicitation or advertisement in any manner. The advocate is not responsible or liable for any consequence of any action taken in reliance on the material on this website. If you have a legal issue, please seek independent legal advice.</p><p><i>Note: access to the website is given only once you confirm that you have read and agree to the above.</i></p><div class="gate-btns"><button type="button" id="gate-no">Leave</button><button type="button" class="go" id="gate-ok">I Agree</button></div></div></div>
 <script>(function(){var g=document.getElementById("gate"),m=document.getElementById("main"),ok=false;
 function close(){g.hidden=true;if(m)m.removeAttribute("inert");document.documentElement.classList.remove("gated")}
 if(ok){g.hidden=true;return}
@@ -1578,4 +1588,93 @@ window.addEventListener("hashchange",route);route();
 })();
 </script>
 
+<script>
+/* ---------- language switch (English / Hindi) ---------- */
+(function(){
+var DICT=null,lang="en",orig=new WeakMap(),setv=new WeakMap();
+var MON={Jan:"जन॰",Feb:"फ़र॰",Mar:"मार्च",Apr:"अप्रैल",May:"मई",Jun:"जून",Jul:"जुल॰",Aug:"अग॰",Sep:"सित॰",Oct:"अक्तू॰",Nov:"नव॰",Dec:"दिस॰"};
+var FULL={January:"जनवरी",February:"फ़रवरी",March:"मार्च",April:"अप्रैल",May:"मई",June:"जून",July:"जुलाई",August:"अगस्त",September:"सितंबर",October:"अक्तूबर",November:"नवंबर",December:"दिसंबर"};
+var SKIP={SCRIPT:1,STYLE:1,TEXTAREA:1,NOSCRIPT:1};
+function norm(s){return s.replace(/\s+/g," ").trim()}
+function tr(s){
+  var k=norm(s);if(!k)return null;
+  if(Object.prototype.hasOwnProperty.call(DICT,k))return DICT[k];
+  var r=k;
+  r=r.replace(/^Enrolment: /,"नामांकन: ");
+  r=r.replace(/enrolled on (\d{1,2}) ([A-Za-z]+) (\d{4})/,function(m,d,mo,y){return d+" "+(FULL[mo]||mo)+" "+y+" को नामांकित"});
+  r=r.replace(/\b(\d{1,2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\d{4})\b/g,function(m,d,mo,y){return d+" "+MON[mo]+" "+y});
+  r=r.replace(/(\d+) min read/,"$1 मिनट पढ़ने में");
+  r=r.replace(/(\d+) areas?\b/,"$1 क्षेत्र");
+  r=r.replace(/^(\d+) of (\d+) notifications?$/,"$2 में से $1 अधिसूचनाएँ");
+  r=r.replace(/^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), (\d{1,2}) ([A-Za-z]+) (\d{4})$/,function(m,w,d,mo,y){return ({Monday:"सोमवार",Tuesday:"मंगलवार",Wednesday:"बुधवार",Thursday:"गुरुवार",Friday:"शुक्रवार",Saturday:"शनिवार",Sunday:"रविवार"})[w]+", "+d+" "+(FULL[mo]||mo)+" "+y});
+  r=r.replace(/(\d+) notifications?\b/,"$1 अधिसूचनाएँ");
+  return r!==k?r:null;
+}
+function doText(n){
+  var p=n.parentNode;if(!p||SKIP[p.nodeName])return;
+  var cur=n.nodeValue;
+  if(!(setv.has(n)&&setv.get(n)===cur))orig.set(n,cur);
+  if(lang!=="hi"||!DICT)return;
+  var o=orig.get(n);if(o==null)return;
+  var t=tr(o);if(t===null)return;
+  var v=(/^\s*/.exec(o)[0])+t+(/\s*$/.exec(o)[0]);
+  if(v!==cur){setv.set(n,v);n.nodeValue=v}
+}
+var ATTR=["placeholder","aria-label","title"];
+function doAttrs(el){
+  if(!el.getAttribute)return;
+  for(var i=0;i<ATTR.length;i++){
+    var a=ATTR[i],v=el.getAttribute(a);if(v==null)continue;
+    var key="data-en-"+a;
+    if(el.hasAttribute(key)){ if(lang==="hi"&&DICT&&el.getAttribute(a)===el.__hiv){continue}else if(lang!=="hi"){continue} }
+    if(lang==="hi"&&DICT){
+      var t=DICT[norm(v)];
+      if(t){el.setAttribute(key,v);el.setAttribute(a,t);el.__hiv=t}
+    }
+  }
+}
+function walk(root){
+  if(root.nodeType===3){doText(root);return}
+  if(root.nodeType!==1||SKIP[root.nodeName])return;
+  doAttrs(root);
+  var c=root.firstChild;while(c){var nx=c.nextSibling;walk(c);c=nx}
+}
+function restore(root){
+  var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null),n,list=[];
+  while((n=w.nextNode()))list.push(n);
+  list.forEach(function(n){if(setv.has(n)&&orig.has(n)){n.nodeValue=orig.get(n);setv.delete(n)}});
+  var els=root.querySelectorAll("[data-en-placeholder],[data-en-aria-label],[data-en-title]");
+  for(var i=0;i<els.length;i++)ATTR.forEach(function(a){var k="data-en-"+a;if(els[i].hasAttribute(k)){els[i].setAttribute(a,els[i].getAttribute(k));els[i].removeAttribute(k)}});
+}
+var mo=new MutationObserver(function(ms){
+  if(lang!=="hi"||!DICT)return;
+  ms.forEach(function(m){
+    if(m.type==="characterData")doText(m.target);
+    else m.addedNodes.forEach(function(n){walk(n)});
+  });
+});
+function labels(){
+  var els=document.querySelectorAll(".lang-toggle");
+  for(var i=0;i<els.length;i++){els[i].textContent=lang==="hi"?"English":"हिन्दी";els[i].setAttribute("lang",lang==="hi"?"en":"hi")}
+}
+function setLang(l){
+  function go(){
+    lang=l;document.documentElement.setAttribute("lang",l==="hi"?"hi":"en");
+    if(l==="hi"){walk(document.body)}else{restore(document.body)}
+    labels();
+    try{localStorage.setItem("ak-lang",l)}catch(e){}
+  }
+  if(l==="hi"&&!DICT){
+    fetch("i18n-hi.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).then(function(d){if(d){DICT=d;go()}}).catch(function(){});
+  }else go();
+}
+mo.observe(document.body,{childList:true,subtree:true,characterData:true});
+document.addEventListener("click",function(e){
+  var b=e.target.closest&&e.target.closest(".lang-toggle");
+  if(b){e.preventDefault();setLang(lang==="hi"?"en":"hi")}
+});
+var saved="en";try{saved=localStorage.getItem("ak-lang")||"en"}catch(e){}
+if(saved==="hi")setLang("hi");
+})();
+</script>
 </body></html>
